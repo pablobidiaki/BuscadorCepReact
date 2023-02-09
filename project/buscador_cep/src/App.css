@@ -5,13 +5,81 @@
 }
 
 html{
-  background-color: #252525;
+  background:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 100% url(imgs/fundo.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+h1{
+  color: white;
+  margin-bottom: 20px;
+}
+
+input{
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+}
+
+button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: dimgray;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: none;
+}
+
+button:hover{
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+#container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container div{
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.295);
+  padding: 20px 15px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 50px;
+
 }
 
 #modal{
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 35%;
   transform: translate(-50%, -50%);
   padding: 10px 20px;
   background-color: white;
@@ -24,6 +92,12 @@ html{
   display: none;
 }
 
-#modal h1, #modal p{
-  margin-bottom: 20px;
+#modal h1{
+  color: red;
+  font-style: italic;
 }
+
+#modal p{
+  color: black;
+}
+

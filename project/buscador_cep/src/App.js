@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Input from './componentes/input';
 import Infos from './componentes/infos';
-import ModalError from './componentes/modalErro';
+import Botao from './componentes/botao';
+
 import './App.css';
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
       <div id='container'>
         <h1>Busque informações de algum CEP !</h1>
         <Input type='number' value={cep} setCep={setCep} placeholder='Digite um CEP . . .'/>
-        <div>
+        <Botao text='Buscar' cep={cep}/>
+        <section id='grid'>
           <Infos cep={cep} setCep={setCep}/>
-        </div>
+        </section>
       </div>
-      <ModalError />
     </div>
   );
 }

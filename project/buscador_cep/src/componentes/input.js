@@ -6,6 +6,7 @@ function Input(props){
         type={props.type}
         value={props.cep}
         onChange={(e) => props.setCep(e.target.value)}
+        onInput={(e) => e.target.value = e.target.value.slice(0, 8)}
         placeholder={props.placeholder}
         />
     )
