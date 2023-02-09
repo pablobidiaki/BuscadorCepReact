@@ -73,31 +73,47 @@ button:hover{
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-column-gap: 50px;
-
 }
 
-#modal{
-  position: absolute;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  background-color: white;
-  height: 200px;
-  text-align: center;
-  border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: none;
+@media (max-width:1540px) {
+  #grid{
+    grid-template-columns: auto auto auto;
+  }
 }
 
-#modal h1{
-  color: red;
-  font-style: italic;
+@media (max-width:1150px) {
+  #grid{
+    grid-template-columns: auto auto;
+  }
+
+  #container div{
+    font-size: 1.1rem;
+  }
 }
 
-#modal p{
-  color: black;
+@media (max-width:700px) {
+  h1{
+    margin: 20px 50px;
+    text-align: center;
+  }
+  #grid{
+    grid-template-columns: auto;
+  }
+
+  #container div{
+    font-size: 1.1rem;
+  }
 }
 
+@media (max-width:340px) {
+  h1{
+    font-size: 1.5rem;
+  }
+  #grid{
+    grid-template-columns: auto;
+  }
+
+  #container div{
+    font-size: 1rem;
+  }
+}
